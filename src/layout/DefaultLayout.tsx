@@ -1,13 +1,16 @@
+import Content from "@/components/common/Content/Content";
+import { Header } from "@/components/common/Header/Header";
+import { Sidebar } from "@/components/common/Nav/Nav";
+
 const DefaultLayout = () => {
   return (
-    <div>
-      <div>사이드바</div>
-      <div>
-        <div>헤더</div>
-        <div>
-          <div>컨텐츠</div>
+    <div className="flex w-full">
+      <Sidebar />
+      <div className="w-full wrapper">
+        <Header />
+        <div className="body flex-grow-1">
+          <Content />
         </div>
-        <div>푸터</div>
       </div>
     </div>
   );
