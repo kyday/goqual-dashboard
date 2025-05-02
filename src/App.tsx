@@ -16,7 +16,7 @@ function App() {
         <Route path="/" element={<Navigate to="/dashboard" replace />} />
         <Route path="*" element={<DefaultLayout />} />
 
-        <Route path="/login" element={<SignIn />} />
+        <Route path="/signin" element={<SignIn />} />
         <Route path="/404" element={<Page404 />} />
       </Routes>
     </Router>
