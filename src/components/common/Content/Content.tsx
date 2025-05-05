@@ -5,8 +5,14 @@ import routes from "@/Routes";
 
 const Content = () => {
   return (
-    <CContainer className="m-0">
-      <Suspense fallback={<CSpinner color="primary" />}>
+    <CContainer className="p-3">
+      <Suspense
+        fallback={
+          <div className="flex justify-center items-center min-h-[300px] w-full">
+            <CSpinner color="primary" />
+          </div>
+        }
+      >
         <Routes>
           {routes.map((route) => {
             return (

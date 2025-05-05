@@ -14,6 +14,7 @@ import {
 } from "@coreui/react";
 import CIcon from "@coreui/icons-react";
 import { cilContrast, cilMoon, cilSun } from "@coreui/icons";
+import { Avatar } from "@/components/common/Avatar/Avatar";
 
 export const Header = () => {
   const { colorMode, setColorMode } = useColorModes(
@@ -75,6 +76,15 @@ export const Header = () => {
               </CDropdownItem>
             </CDropdownMenu>
           </CDropdown>
+
+          <li className="nav-item ">
+            <Avatar
+              color="secondary"
+              className="ml-5 cursor-pointer"
+              name="kim"
+              size="md"
+            />
+          </li>
         </CHeaderNav>
       </CContainer>
     </CHeader>

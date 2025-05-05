@@ -4,11 +4,12 @@ import {
   CSidebarHeader,
   CSidebarNav,
   CNavItem,
+  CNavLink,
 } from "@coreui/react";
 
 import CIcon from "@coreui/icons-react";
 import { cilControl, cilSpeedometer } from "@coreui/icons";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export const Sidebar = () => {
   return (
@@ -18,21 +19,15 @@ export const Sidebar = () => {
       </CSidebarHeader>
       <CSidebarNav>
         <CNavItem>
-          <Link
-            className="flex text-decoration-none text-white items-center mt-2 ml-2 mb-4"
-            to="/"
-          >
+          <CNavLink as={NavLink} to="/dashboard">
             <CIcon customClassName="nav-icon" icon={cilSpeedometer} /> Dashboard
-          </Link>
+          </CNavLink>
         </CNavItem>
 
         <CNavItem>
-          <Link
-            className="flex text-decoration-none text-white items-center mt-2 ml-2 mb-4"
-            to="/control"
-          >
+          <CNavLink as={NavLink} to="/control">
             <CIcon customClassName="nav-icon" icon={cilControl} /> Control
-          </Link>
+          </CNavLink>
         </CNavItem>
       </CSidebarNav>
     </CSidebar>
