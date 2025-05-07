@@ -23,7 +23,7 @@ export const dashboardService = {
       return response.data;
     } catch (error) {
       if (axios.isAxiosError(error) && error.response) {
-        throw new Error(error.response.data?.message || "Login failed");
+        throw new Error(error.response.data?.message);
       }
       throw error;
     }

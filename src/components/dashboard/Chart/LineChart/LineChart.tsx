@@ -36,7 +36,11 @@ const ChartLine = (props: {
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="name" />
           <YAxis />
-          <Tooltip />
+          <Tooltip
+            contentStyle={{
+              color: "#000",
+            }}
+          />
           <Legend />
 
           {Object.keys(statusKeyLabelMap)

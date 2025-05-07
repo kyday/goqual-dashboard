@@ -6,10 +6,11 @@ export const Card = (props: {
   title: string;
   children: ReactNode;
   className?: string;
+  onClick?: () => void;
 }) => {
-  const { header, title, children, className } = props;
+  const { header, title, children, className, onClick } = props;
   return (
-    <CCard className={className}>
+    <CCard {...props} className={className} onClick={onClick}>
       <CCardHeader>{header}</CCardHeader>
       <CCardBody>
         <CCardTitle>{title}</CCardTitle>
