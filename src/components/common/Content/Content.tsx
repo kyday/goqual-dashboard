@@ -8,7 +8,10 @@ const Content = () => {
     <CContainer className="p-3">
       <Suspense
         fallback={
-          <div className="flex justify-center items-center min-h-[300px] w-full">
+          <div
+            className="flex justify-center items-center min-h-[300px] w-full"
+            data-testid="loading-spinner"
+          >
             <CSpinner color="primary" />
           </div>
         }
